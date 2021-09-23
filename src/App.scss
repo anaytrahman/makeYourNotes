@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.App {
+  padding: 2rem;
+  background-color: rgba(194, 185, 185, 0.062);
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+form {
+  svg.MuiSvgIcon-root {
+    font-size: 46px;
+  }
+}
+.input-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+.show-todo-wrapper {
+  flex-direction: row;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  .boxes {
+    background: white;
+    padding: 29px 29px 6px 1px;
+    margin: 10px;
+    width: 30%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 4px;
+    &:hover > .actions-wrapper {
+      visibility: visible;
+      opacity: 1;
+    }
+    .title-wrapper {
+    }
+    .actions-wrapper {
+      visibility: hidden;
+      border-top: solid #e7e4e426;
+      margin: 10px 0;
+
+      padding: 10px 12px 0;
+      width: 62%;
+      margin: 0 auto;
+      opacity: 0;
+      transition: visibility 1.3s linear, opacity 1.15s linear;
+      button {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+ul {
+  li {
+    list-style: none;
+  }
+}
+button {
+  background-color: #d1171700;
+  border: none;
+  cursor: pointer;
+}
+
+//alert box
+
+.alert-box {
+  margin-top: 20px;
+  height: 50px;
+  width: 70%;
+  position: absolute;
+  text-align: center;
+}
+
+//responsive
+@media screen and(max-width: 930px) {
+  .show-todo-wrapper {
+    .boxes {
+      padding: 9px 16px 5px 1px;
+      width: 44%;
+      .actions-wrapper {
+        padding: 10px 6px 6px 16px;
+      }
+    }
+  }
+}
+@media screen and(max-width: 668px) {
+  .show-todo-wrapper {
+    .boxes {
+      padding: 9px 16px 5px 1px;
+      width: 82%;
+      .actions-wrapper {
+        visibility: visible;
+        opacity: 1;
+        padding: 10px 6px 6px 16px;
+        width: 100%;
+      }
+    }
+  }
+
+  
+form {
+  svg.MuiSvgIcon-root {
+    font-size: 35px;
+  }
+}
+}
+
+@media screen and(max-width:580px) {
+  ul li {
+    list-style: none;
+    font-size: 13px;
+  }
+}
+
+@media screen and(max-width:320px) {
+  .show-todo-wrapper .boxes {
+    width: 93%;
+  }
+}
